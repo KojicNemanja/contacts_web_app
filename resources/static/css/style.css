@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;1,400&family=Overlock:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+#horizontal_menu{
+    display: none;
+    justify-content: flex-start;
+}
+
+#dropdown_menu_btn{
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+#vertical_menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    height: 3.5rem;
+    background-color: darkred;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    font-weight: 400;
+}
+
+.nav > a{
+    border-right: 1px solid #b3b3b3;
+    border-radius: 0.5rem;
+    color: #b3b3b3;
+    width: 110px;
+}
+
+.nav > a:hover{
+    border-right: 1px solid #000000;
+    color: #000000;
+    transition: 1s;
+}
+
+.nav > li{
+    border-right: 1px solid black;
+}
+.nav > a > i{
+    color: black;
+}
+
+.main_title{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    background-color: darkred;
+    color: rgb(11, 94, 215);
+    font-size: 1.8rem;
+    padding: 1rem;
+    font-family: 'Overlock', cursive;
+    font-weight: 400;
+}
+
+.login_form{
+    background-color: rgb(33, 37, 41);
+    color: white;
+    padding: 1.5rem;
+    font-size: 0.6rem;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 37, 41);
+    min-width: 250px;
+    position: relative;
+}
+
+.contact_data{
+    display: flex;
+    margin: 0.3rem;
+    width: 90%;
+    height: 80px;
+    background-color: rgb(44, 48, 52);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    width: 100px;
+    height: 100%;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 75%;
+    padding: 5px;
+}
+
+.personal_data{
+    width: 100%;
+}
+
+.phone{
+    width: 100%;
+}
+
+.buttons_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.add-form{
+    background-color: rgb(33, 37, 41);
+    color: white;
+    font-size: 0.6rem;
+    padding: 1.5rem;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+}
+
+.preview_uploaded_photo_box{
+    position: relative;
+    display: none;
+    width: 150px;
+    height: 110px;
+    margin-top: 0.5rem;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    
+}
+
+.title > h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+.delete_dialog{
+    display: none;
+    position: fixed;
+    width: 16rem;
+    height: 16rem;
+    left: calc(50% - 8rem);
+    top: 20vh;
+    border-radius: 0.7rem;
+    background-color: rgb(44, 48, 52);
+    
+    overflow: hidden;
+}
+
+#dialog_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    background-color: #bfbfbf;
+    font-weight: bold;
+    color: rgb(44, 48, 52);
+}
+#dialog_contact{
+    width: 100%;
+    height: 45%;
+    color: #bfbfbf;
+    font-weight: 300;
+}
+#dialog_contact_name, #dialog_contact_phone{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+#dialog_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: #bfbfbf;
+}
+#submit_delete{
+    font-size: 2.5rem;
+    color: darkgreen;
+    font-weight: bold;
+}
+#close_delete{
+    font-size: 2.5rem;
+    color: darkred;
+    margin-left: 3rem;
+    font-weight: bold;
+    border: none;
+    background: none;
+}
+
+
+.box_message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 14rem;
+    height: 5rem;
+    position: fixed;
+    top: 15vh;
+    left: calc(50% - 7rem);
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    border: 1px dashed black;
+    z-index: 11;
+}
+
+.edit_photo_box, .add_photo_box{
+    display: none;
+    position: fixed;
+    width: 16rem;
+    height: 18rem;
+    max-height: 80vh;
+    top: 15vh;
+    left: calc(50% - 8rem);
+    font-size: 0.8rem;
+}
+
+.add_photo_box{
+    background-color: black;
+}
+
+#file-new_photo{
+    display: none;
+}
+
+.edit_photo_box > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.input_field{
+    background-color: rgb(44, 48, 52);
+    color: white;
+    font-size: 0.6rem;
+}
+
+.input_btn{
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+
+#edit-btn{
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.5px;
+    color: yellow;
+}
+
+#delete-btn{
+    border: none;
+    background: none;
+    font: 0.8rem;
+    color: rgb(196, 1, 1);
+}
+
+#dialog_btns{
+    display: flex;
+    justify-content: center;
+}
+
+#delete_contact_link, #btn_close_delete_dialog{
+    font-size: 0.7rem;
+    padding: 0.1 0.3rem;
+}
+
+#btn_close_delete_dialog:link{
+    font-size: 0.9rem;
+}
+
+#btn_close_delete_dialog{
+    margin-left: 10px;
+}
+
+#close_message_btn{
+    border: 1px solid black;
+    padding: 0.3rem;
+}
+
+.photo{
+    width: 100%;
+    height: 100%;
+}
+
+#btn_delete_photo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(33, 37, 41, 95%);
+    text-decoration: none;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#btn_delete_photo > a{
+    text-decoration: none;
+    color: white;
+    margin-left: 0.3rem;
+}
+
+#search_form{
+    display: none;
+    padding: 15px 0;
+}
+
+#search_form > input{
+    width: 16rem;
+}
+
+#small_form{
+    display: flex;
+    margin-bottom: 0.4rem;
+}
+
+#small_form > input{
+    margin-right: 0.5rem;
+    height: 1.5rem;
+    width: 9rem;
+    font-size: 0.6rem;
+}
+
+#small_form > button{
+    font-size: 0.6rem;
+    padding: 0.2rem;
+}
+
+
+#edit_photo_label > input[type="file"]{
+    display: none;
+}
+
+#edit_photo_label{
+    margin-left: 0.3rem;
+}
+#btn_upload_photo{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 37, 41, 95%);
+    color: rgb(255, 198, 26);
+}
+/*
+#btn_new_photo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(44, 48, 52, 90%);
+    color: yellow;
+}*/
+
+#btn_close_edited_photo{
+    position: absolute;
+    top: 0.5rem;
+    right: 5px;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.5rem;
+    background-color: rgba(33, 37, 41, 90%);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+#btn_save_edited_photo{
+    display: none;
+    position: absolute;
+    top: 3rem;
+    right: 5px;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    background-color: rgba(33, 37, 41, 90%);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+
+#upload_file_lbl{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#upload_file_lbl > input[type="file"]{
+    display: none;
+}
+
+#upload_photo_link{
+    width: 100%;
+    height: 100%;
+}
+
+#remove_upload_photo_btn{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+#upload_photo{
+    display: none;
+}
+/*
+#upload_file_name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+/*
+#view_upload_photo{
+    display: none;
+    position: fixed;
+    width: 16rem;
+    height: 18rem;
+    top: 10rem;
+    left: calc(50% - 8rem);
+}
+*/
+#upload_photo_link{
+    width: 100%;
+    height: 100%;
+}
+
+#add_image_lbl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#added_photo_link{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#btn_save_added_photo{
+    display: none;
+    position: absolute;
+    top: 3rem;
+    right: 5px;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    background-color: rgba(33, 37, 41, 90%);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+#btn_close_add_box{
+    position: absolute;
+    top: 0.5rem;
+    right: 5px;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.5rem;
+    background-color: rgba(33, 37, 41, 90%);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+#btn_add_photo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 95%);
+    color: rgb(255, 198, 26);
+    height: 2rem;
+}
+
+#add_photo_label{
+    margin-left: 0.3rem;
+}
+
+#default_photo{
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#move_top{
+    position: sticky;
+    bottom: 0.1rem;
+    font-size: 2rem;
+    display: none;
+}
+
+#drop_menu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 0px;
+    position: absolute;
+    top: 3rem;
+    right: 0.5rem;
+    background-color: #737373;
+    border-radius: 0.5rem;
+    z-index: 15;
+    overflow: hidden;
+}
+
+.item_box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #b3b3b3;
+    border-radius: 0.5rem;
+}
+
+.icon_box{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 80px;
+    font-size: 1rem;
+}
+
+.item_text > a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/*
+#drop_menu > a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+    border-bottom: 1px solid #b3b3b3;
+    padding-left: 0.6rem;
+    height: 100%;
+    width: 100%;
+    border: 1 px solid black;
+}
+*/
+#dropdown_logout_btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.6rem;
+    border: 1 px solid black;
+    z-index: 15;
+}
+
+#logout_item{
+    position: absolute;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    top: 3rem;
+    right: 0.5rem;
+    background-color: #737373;
+    border-radius: 0.5rem;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+#all_icon, #all_icon_horizontal{
+    color: darkgreen;
+    margin-right: 0.4rem;
+}
+
+#add_icon, #add_icon_horizontal{
+    color: #0052cc;
+    margin-right: 0.4rem;
+}
+
+#logout_icon{
+    color: darkred;
+    margin-right: 0.4rem;
+}

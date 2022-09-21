@@ -1,0 +1,97 @@
+@media all and (min-width : 768px){
+    .main_menu{
+        font-size: 1.5rem;
+    }
+
+    #horizontal_menu{
+        display: flex;
+    }
+
+    #vertical_menu{
+        display: none;
+    }
+
+    #search_form{
+        display: flex;
+    }
+    
+    .login_form, .add-form{
+        width: 400px;
+        margin: auto;
+        margin-top: 3rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+    }
+
+    .input_field, .input_btn{
+        font-size: 1rem;
+    }
+
+    .title > h3{
+        font-size: 1.5rem;
+    }
+
+    .main_titile{
+        font-size: 3.5rem;
+    }
+
+    #edit-btn, #delete-btn{
+        font-size: 1.1rem;
+    }
+
+    .main_title{
+        font-weight: 700;
+    }
+
+    .contact-box{
+        width: 70%;
+        margin: 3rem auto;
+    }
+
+    .contact_data{
+        margin: 10px;
+        width: 500px;
+        height: 110px;
+        font-size: 1.1rem;
+    }
+
+    .image{
+        width: 150px;
+    }
+
+    
+    .box_message{
+        flex-direction: row;
+        width: 40rem;
+        height: 4rem;
+        left: calc(50% - 20rem);
+        font-size: 1.1rem;
+    }
+
+    .delete_dialog{
+        width: 16rem;
+        height: 12rem;
+        left: calc(50% - 8rem);
+        font-size: 1.1rem;
+    }
+
+    .edit_photo_box, .add_photo_box{
+        width: 20rem;
+        height: 22rem;
+        left: calc(50% - 10rem);
+        font-size: 1.1rem;
+    }
+
+    #small_form{
+        display: none;
+    }
+
+    #search_form{
+        display: flex;
+    }
+
+
+    #delete_contact_link, #btn_close_delete_dialog{
+        font-size: 1rem;
+    }
+}
