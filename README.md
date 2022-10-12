@@ -15,4 +15,6 @@ Data of contact are: first name, last name, phone, image.
 Every user must have be registered using username and password.
 User can add, view, delete, edit and search his contacts.
 
-![1644948579976](https://user-images.githubusercontent.com/76007389/195319326-d7184380-be9d-4154-b93e-214db337c1b7.jpg)
+1. View
+![1665571841298](https://user-images.githubusercontent.com/76007389/195326527-9c5816d8-58db-4e50-b886-e258f78303d6.jpg)
+
